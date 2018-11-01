@@ -5,7 +5,7 @@
 */
 
 <template>
-<div class="lh70 cBlu" id="info">
+<div class="lh70 cBlu tc bgcGre" id="info">
   {{info}}
 </div>
 </template>

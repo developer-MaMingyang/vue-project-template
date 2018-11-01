@@ -11,4 +11,5 @@ export const getData = ({ el }) => $post({
   params: { a: 1 }, // Query String Parameters
   data: { b: 2 }, // Request Payload
   el,
+  ignore: 10002,
 });

@@ -4,7 +4,7 @@
 */
 
 <template>
-  <el-footer height="70px">
+  <el-footer height="70px" class="bgcGra tc fz30">
     <p class="lh70">我是footer</p>
   </el-footer>
 </template>

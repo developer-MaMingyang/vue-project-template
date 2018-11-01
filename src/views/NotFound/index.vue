@@ -5,7 +5,7 @@
 */
 
 <template>
-<div>
+<div class="tc bgcGre">
   <p class="cRed">我是404页面</p>
 </div>
 </template>

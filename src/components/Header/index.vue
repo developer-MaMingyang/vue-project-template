@@ -4,7 +4,7 @@
 */
 
 <template>
-  <el-header height="70px">
+  <el-header height="70px" class="bgcGra tc fz30">
     <p class="lh70">我是header</p>
   </el-header>
 </template>
