@@ -63,7 +63,7 @@ export const getQueryString = (name) => {
 // IEVersion: 判断IE浏览器版本
 // 返回值    -1:非IE，6:≤ie6，7-11:ie7-ie11，edge: edge浏览器
 export const IEVersion = () => {
-  const userAgent = navigator.userAgent,
+  const { userAgent } = navigator,
     isIE = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1,
     isEdge = userAgent.indexOf('Edge') > -1 && !isIE,
     isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf('rv:11.0') > -1;
