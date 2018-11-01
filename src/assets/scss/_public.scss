@@ -4,12 +4,22 @@
 * usage: 全局基础公用样式。定义长宽、间距、字体大小、颜色时，请勿置于此文件。
 */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-size: 14px;
+  color: #000000;
 }
 
 a {
   text-decoration: none;
+  color: #000000;
+  &:visited {
+    color: #000000;
+  }
 }
 
 p {
