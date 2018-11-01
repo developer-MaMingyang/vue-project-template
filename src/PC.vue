@@ -1,7 +1,9 @@
 <template>
   <el-container direction="vertical">
     <Header/>
-    <router-view/>
+    <div :style="{minHeight}">
+      <router-view/>
+    </div>
     <Footer/>
   </el-container>
 </template>
@@ -13,9 +15,28 @@ export default {
     Header: () => import('./components/Header'),
     Footer: () => import('./components/Footer'),
   },
+  data() {
+    return {
+      minHeight: '0',
+    };
+  },
+  methods: {
+    listenResize() {
+      window.onresize = () => {
+        this.setMinHeight();
+      };
+    },
+    setMinHeight() {
+      this.minHeight = `${document.documentElement.clientHeight - 140}px`;
+    },
+  },
+  created() {
+    this.setMinHeight();
+    this.listenResize();
+  },
 };
 </script>
 
 <style lang="scss">
-@import "reset";
+  @import "reset";
 </style>
