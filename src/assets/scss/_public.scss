@@ -1,0 +1,77 @@
+/*
+* author: mamingyang@baofeng.com
+* date: 2018/11/1
+* usage: 全局基础公用样式。定义长宽、间距、字体大小、颜色时，请勿置于此文件。
+*/
+
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: inline-block;
+}
+
+.cp {
+  cursor: pointer;
+}
+
+.vab {
+  vertical-align: bottom;
+}
+
+.vam {
+  vertical-align: middle;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.db {
+  display: block;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.df {
+  display: flex;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.pr {
+  position: relative;
+}
+
+.wrap-box {
+  width: 1290px;
+  margin: 0 auto;
+}
+
+.model-title {
+  font-size: 20px;
+  line-height: 30px;
+}

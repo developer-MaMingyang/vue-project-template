@@ -1,0 +1,13 @@
+/*
+* author: mamingyang@baofeng.com
+* date: 2018/11/1
+* usage: 重定义修改element-ui样式
+*/
+
+.el-header, .el-main, .el-footer {
+  padding: 0;
+}
+
+.el-card__body {
+  padding: 0;
+}
