@@ -66,13 +66,11 @@ axios.interceptors.response.use(response => response, (err) => {
       default:
         err.message = `连接错误。`;
     }
-  } else {
-    err.message = '连接到服务器失败';
+    Notification.error({
+      title: `错误${err.response.status}`,
+      message: `${err.message}`,
+    });
   }
-  Notification.error({
-    title: `错误${err.response.status}`,
-    message: `${err.message}`,
-  });
   return Promise.resolve(err.response);
 });
 
@@ -82,6 +80,7 @@ axios.defaults.headers = {
   'X-Requested-With': 'XMLHttpRequest',
 };
 axios.defaults.timeout = 10000;
+axios.withCredentials = true;
 
 // get请求
 export const $get = ({ url, params, ignore, el }) => new Promise((resolve, reject) => {
@@ -120,7 +119,10 @@ export const $post = ({ url, params, data, ignore, el }) => new Promise((resolve
     cancelToken: new CancelToken((c) => {
       cancel = c;
     }),
-  }).then(({data}) => {
+  }).then((res) => {
+    if (!res) return;
+    const {data, status} = res;
+    if (status !== 200) return;
     if (sending) sending.close();
     if (checkErrorCode(data, ignore)) {
       resolve(data, ignore);
