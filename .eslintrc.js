@@ -57,6 +57,7 @@ module.exports = {
     'guard-for-in': 0,
     'no-restricted-syntax': 0,
     'one-var': 0,
-    'object-shorthand': 0
+    'object-shorthand': 0,
+    "one-var-declaration-per-line": 0
   }
 };
